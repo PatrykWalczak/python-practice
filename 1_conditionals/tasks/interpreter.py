@@ -1,8 +1,14 @@
 user = input("Expression: ")
 
-x = user.split(" ")
-print(x)
+x, y, z = user.split(" ")
+x = float(x)
+z = float(z)
 
-
-
-
+if y == "+":
+    print(f"{x + z:.1f}")
+elif y == "-":
+    print(f"{x - z:.1f}")
+elif y == "*":
+    print(f"{x * z:.1f}")
+elif y == "/":
+    print(f"{x / z:.1f}")
