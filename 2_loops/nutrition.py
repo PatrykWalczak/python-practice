@@ -6,7 +6,7 @@
 #     print("Calories:", fruits_dict[user_ask])
 
 
-def any_fruits(user_ask ):
+def any_fruits(user_ask):
     fruits_dict = {"apple": 130, "avocado": 50, "banana": 110}
     # user_ask = input("Item: ").lower()
 
