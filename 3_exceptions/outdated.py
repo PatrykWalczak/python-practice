@@ -13,23 +13,6 @@ months_list = [
     "December"
 ]
 
-months_dict = {
-    "January": 1,
-    "February": 2,
-    "March": 3,
-    "April": 4,
-    "May": 5,
-    "June": 6,
-    "July": 7,
-    "August": 8,
-    "September": 9,
-    "October": 10,
-    "November": 11,
-    "December": 12
-}
-
-
-
 
 while True:
     ask_user = input("Date: ")
@@ -49,6 +32,14 @@ while True:
                 break
             else:
                 raise ValueError()
+        else:
+            # pozbycie się przecinka i podzielenie na liste 3 elementowa tego co pyta user
+            splited_list = ask_user.replace(",", "").split()
+            month = int(splited_list[0])
+            day = int(splited_list[1])
+            year = int(splited_list[2])
+            month = months_list.index(splited_list[0]) + 1
+
     except ValueError:
         print("ValueError- mozliwe problemy to: STR zamiast INT, nieprawidłowy dzień / miesiąć ")
 
