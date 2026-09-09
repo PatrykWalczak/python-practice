@@ -35,10 +35,12 @@ while True:
         else:
             # pozbycie się przecinka i podzielenie na liste 3 elementowa tego co pyta user
             splited_list = ask_user.replace(",", "").split()
-            month = int(splited_list[0])
             day = int(splited_list[1])
             year = int(splited_list[2])
             month = months_list.index(splited_list[0]) + 1
+
+            if 1 <= month <= 12 and 1 <= day <= 31:
+                
 
     except ValueError:
         print("ValueError- mozliwe problemy to: STR zamiast INT, nieprawidłowy dzień / miesiąć ")
